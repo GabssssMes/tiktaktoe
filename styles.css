@@ -1,0 +1,88 @@
+@font-face {
+    font-family: anuphan;
+    src: url("Anuphan-Regular.ttf");
+}
+:root{
+    --size:450px;
+    --gap:10px;
+}
+body{
+    margin: 0;
+}
+.container{
+    height:100vh;
+    width:100vw;
+    background-color: rgb(250, 247, 247);
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    font-family: anuphan;
+
+}
+.count{
+    display: flex;
+    justify-content: center;
+    gap:calc(4*var(--gap));
+}
+.reset{
+    align-self: center;
+}
+.header{
+    padding-top:20px;
+    font-size: 50px;
+}
+button{
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color:  rgb(223, 223, 223);;
+}
+button:hover{
+    cursor:pointer;
+}
+.turn{
+    padding:20px;
+    font-size: 30px;
+
+}
+.gameboard{
+    box-shadow: 0px 4px 30px 20px black;
+    background-color:black;
+    height: var(--size);
+    width: var(--size);
+    display:grid;
+    gap:var(--gap) var(--gap);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    resize: none;
+    margin:20px;
+}
+.field{
+    background-color: rgb(148, 147, 147);
+    color: rgb(148, 147, 147);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--size)/4);
+    font-weight: bold;
+    resize: none;
+}
+.field:hover{
+    cursor: pointer;
+    background-color:  rgb(226, 226, 226);
+    resize: none;
+}
+.standings{
+    padding:20px;
+}
+table{
+    width: var(--size);
+}
+table,td,tr,th{
+    text-align: center;
+    border:2px solid;
+    border-collapse: collapse;
+    padding:10px;
+}
